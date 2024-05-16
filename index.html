@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <title>Thumbnail Gallery</title>
+    <style>
+            *{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        body {
+            background-color: #2f3640;
+        }
+        img{
+            object-fit: cover;
+            object-position: center;
+        }
+        .gallery {
+            width: 100%;
+            max-width: 720px;
+            margin: 40px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .gallery-slider {
+            width: 80%;
+            height: auto;
+            overflow: hidden;
+        }
+        .gallery-slider .swiper-slide {
+            width: 100%;
+            height: 550px;
+            margin: 0px !important;
+            cursor: grab;
+        }
+        .gallery-slider .swiper-slide img {
+            display: block;
+            width: auto;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .gallery-thumbs {
+            width: 20%;
+            height: auto;
+            max-height: 550px;
+            overflow: hidden;
+            cursor: grab;
+        }
+        .gallery-thumbs .swiper-wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .gallery-thumbs .swiper-slide {
+            width: 100%;
+            height: 150px;
+            text-align: center;
+            overflow: hidden;
+            opacity: 0.4;
+            transition: opacity 0.3s;
+            margin: 0;
+            padding: 0;
+        }
+        .gallery-thumbs .swiper-slide-active {
+            opacity: 1;
+        }
+        .gallery-thumbs .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+     .swiper-button-prev{
+        left: 21.5%;
+     }
+
+@media (max-width: 1075px) {
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .gallery-slider {
+        max-height: 400px;
+    }
+    .gallery-thumbs {
+        max-height: 400px;
+    }
+
+}
+@media (max-width: 610px) {
+   body{
+    padding: 0 50px;
+   }
+    .gallery-slider {
+        max-height: 400px;
+    }
+    .gallery-thumbs {
+        max-height: 400px;
+    }
+
+}
+@media (max-width: 412px) {
+    :root {
+        --swiper-navigation-size: 20px;
+    }
+    body {
+        padding: 0 10px;
+    }
+    .gallery-slider {
+        height: 50%;
+    }
+    .gallery-thumbs {
+        width: 80%;
+    }
+    .gallery {
+        width: 100%;
+        max-width: 900px;
+        margin: 40px auto;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .gallery-slider .swiper-slide{
+    height: 300px;
+    }
+    .gallery-thumbs .swiper-wrapper {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+    .gallery-thumbs .swiper-slide{
+        width: 100px;
+        height: 100px;
+    }
+    .gallery-thumbs .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        /* max-width: 150px; */
+    }
+    .swiper-button-prev{
+        top: 40%;
+        left: 13%;
+     }
+    .swiper-button-next{
+        top: 40%;
+        right: 13%;
+     }
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="swiper-container gallery-thumbs">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1714752493908-bdd641f85d42?q=80&w=1529&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1714115035000-023149febb01?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1714589991469-fd88529012c1?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1714399417136-d328f3ea14c7?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1714329781250-64b9125f689c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+              
+            </div>
+        </div>
+
+        <div class="swiper-container gallery-slider">
+            <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1714752493908-bdd641f85d42?q=80&w=1529&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1714115035000-023149febb01?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1714589991469-fd88529012c1?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1714399417136-d328f3ea14c7?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1714329781250-64b9125f689c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+            </div>
+            
+        </div>
+     
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var thumbs = new Swiper('.gallery-thumbs', {
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    loop: false,
+    slideToClickedSlide: true,
+    direction: 'vertical',
+    initialSlide: 0,
+    draggable: true,
+    breakpoints: {
+        0: {
+            direction: 'horizontal',
+            slidesPerView: 3 
+        },
+        412: {
+            direction: 'vertical',
+            slidesPerView: 'auto'
+        }
+    }
+});
+
+
+
+
+      var slider = new Swiper('.gallery-slider', {
+        slidesPerView: 1,
+        centeredSlides: true,
+        loop: false,
+        draggable: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        initialSlide: 0,
+      });
+
+      slider.controller.control = thumbs;
+      thumbs.controller.control = slider;
+    });
+
+  
+
+  </script>
+    
+    
+    
+</body>
+</html>
